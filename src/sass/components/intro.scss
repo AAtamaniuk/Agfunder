@@ -2,7 +2,7 @@
 @import "../mixins.scss";
 
 .intro {
-  height: 270px;
+  height: 272px;
   color: white;
   background-color: hsl(0, 0%, 28%);
 }
@@ -15,20 +15,42 @@
   margin-top: 37px;
   margin-bottom: 16px;
   font-family: $heading-font;
-  font-size: 61px;
   font-weight: bold;
+  font-size: 61px;
+  @media (max-width: $tablet-max) {
+    margin-top: 50px;
+    margin-bottom: 22px;
+    font-size: 48px;
+  }
+  @media (max-width: $mobile-max) {
+    margin-top: 25px;
+    margin-bottom: 18px;
+    font-size: 30px;
+  }
 }
 
 .intro__subtitle {
   margin-bottom: 40px;
+  @media (max-width: $mobile-max) {
+    font-size: 16px;
+    line-height: 1.25em;
+    margin-bottom: 15px;
+  }
 }
 
 .intro__steps-wrap .intro__step:first-child {
     margin-right: 25px;
+  @media (max-width: $mobile-max) {
+    margin-right: 0px;
+    margin-bottom: 10px;
+  }
 }
 
 .intro__step {
   font-size: 18px;
+  @media (max-width: $mobile-max) {
+    display: block;
+  }
 }
 
 .intro__round-number {
@@ -38,4 +60,9 @@
   border: 1px solid white;
   border-radius: 50%;
   margin-right: 13px;
+}
+
+.intro__round-number--required {
+  color: hsl(105, 43%, 52%);
+  border-color: hsl(105, 43%, 52%);
 }
