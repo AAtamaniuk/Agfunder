@@ -1,0 +1,78 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+/* Footer */
+footer {
+  padding-top: 65px;
+  margin: 0;
+  background: url(img/seventh.jpg) no-repeat fixed 50% 0;
+  background-size: cover !important;
+  background-color: #111;
+}
+footer h5 {
+  font-family: 'open_sans_semiboldregular';
+  color: #fff;
+}
+footer ul {
+  margin-top: 0;
+  margin-bottom: 10px;
+  padding: 0;
+  list-style: none;
+}
+footer .col-md-3 li {
+  line-height: 32px;
+}
+footer .col-md-3 li a {
+  color: #6BBA51;
+  font-size: 14px;
+}
+footer p {
+  margin: 5px 0 12px;
+  color: #7d898e;
+}
+footer .connect-with a {
+  width: 44px;
+  height: 44px;
+  margin-right: 7px;
+  float: left;
+  text-indent: -9999px;
+  background: url('/static/img/social.png') no-repeat;
+}
+footer .connect-with a.tw {
+  background-position: -60px 0;
+}
+footer .connect-with a.gplus {
+  background-position: -120px 0;
+}
+footer .connect-with a.rss {
+  background-position: 100% 0;
+}
+footer .mixpanel {
+  margin-top: 16px;
+}
+footer .footer-bottom {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 500px) {
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  .navbar-collapse {
+    background: url(img/navbar.png) repeat;
+  }
+  .navbar .navbar-nav>li {
+    display: block !important;
+    line-height: 30px;
+  }
+  .navbar-brand {
+    margin-left: 10px;
+  }
+  .navbar-toggle {
+    margin-top: 15px;
+  }
+}

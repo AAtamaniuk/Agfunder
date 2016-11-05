@@ -1,0 +1,28 @@
+@import "vars.scss";
+@import "mixins.scss";
+
+@charset "utf-8";
+
+body {
+  //font-family: 'open_sansregular';
+  //-webkit-font-smoothing: antialiased;
+  //font-smoothing: antialiased;
+  //opacity: 0.99;
+  //color: #363636;
+  //background: #fff;
+  font-family: $main-font;
+  font-size: 14px;
+}
+
+/*a {
+  color: #309E0C;
+  text-decoration: none;
+  cursor: pointer;
+}*/
+
+.page-content {
+  //header width
+  margin-top: 63px;
+}
+
+

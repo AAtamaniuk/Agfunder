@@ -41,19 +41,19 @@ gulp.task("style", function() {
   //.pipe(server.reload({stream: true}));
 });
 
-// gulp.task("style:dev", function() {
-//   gulp.src("sass/style.scss")
-//   .pipe(plumber())
-//   .pipe(sass())
-//   .pipe(postcss([
-//     autoprefixer({browsers: browsers})
-//   ]))
-//   .pipe(gulp.dest("css"))
-//   .pipe(minify())
-//   .pipe(rename("style.min.css"))
-//   .pipe(gulp.dest("css"));
-//   //.pipe(server.reload({stream: true}));
-// });
+gulp.task("style:dev", function() {
+  gulp.src("src/sass/style.scss")
+  .pipe(plumber())
+  .pipe(sass())
+  .pipe(postcss([
+    autoprefixer({browsers: browsers})
+  ]))
+  .pipe(gulp.dest("src/css"))
+  .pipe(minify())
+  .pipe(rename("style.min.css"))
+  .pipe(gulp.dest("src/css"));
+  //.pipe(server.reload({stream: true}));
+});
 
 gulp.task("symbols", function() {
   return gulp.src("build/img/icons/*.svg")

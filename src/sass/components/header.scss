@@ -1,0 +1,65 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+/*
+///////////////////// Navbar /////////////////////
+*/
+
+.navbar {
+  background: url('/static/img/navbar.png') repeat;
+  height: 63px;
+  background-color: #222;
+}
+
+.navbar-brand {
+  width: 140px;
+  height: 44px;
+  margin-top: -5px;
+  padding: 15px 0;
+}
+
+.navbar-brand > img {
+  width: 127px;
+  height: 45px;
+}
+
+.navbar .navbar-right {
+  margin-bottom: 0;
+  background: url('/static/img/navline.png') no-repeat 100% 50%;
+}
+
+.navbar .navbar-nav > li {
+  line-height: 66px;
+  margin-right: 14px;
+  padding-left: 8px;
+  display: inline-block !important;
+}
+
+.navbar .navbar-nav > li > a {
+  padding: 0;
+  display: inline-block;
+  color: #c2c5c9;
+  font-size: 16px;
+  font-family: 'effra_mediumregular';
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .75);
+}
+
+.navbar .navbar-nav > li > a:hover {
+  border-bottom: 2px solid #6BBA51;
+  text-decoration: none;
+  color: #fff;
+}
+
+/*
+////////////////// Dropdown menu //////////////////
+*/
+
+.dropdown-menu > li > a {
+  color: white;
+  font-family: 'effra_mediumregular';
+}
+
+.dropdown-menu {
+  background-color: black;
+  background: url('/static/img/navbar.png') repeat;
+}
