@@ -7,8 +7,14 @@ body {
   text-decoration: none;
   cursor: pointer;
 }*/
+a {
+  color: #28c356; }
+
 .page-content {
   margin-top: 63px; }
+
+.required {
+  color: red; }
 
 /*
 ///////////////////// Navbar /////////////////////
@@ -130,10 +136,24 @@ footer .footer-bottom {
   .navbar-toggle {
     margin-top: 15px; } }
 
+.btn--big {
+  height: 50px; }
+
+.btn--upper {
+  text-transform: uppercase;
+  font-weight: 600; }
+
 .intro {
   height: 272px;
+  margin-bottom: 30px;
   color: white;
   background-color: #474747; }
+  @media (max-width: 991px) {
+    .intro {
+      margin-bottom: 20px; } }
+  @media (max-width: 767px) {
+    .intro {
+      margin-bottom: 5px; } }
 
 .intro--bg-grass {
   background-image: url(../img/grass-bg.png); }
@@ -167,10 +187,11 @@ footer .footer-bottom {
   margin-right: 25px; }
   @media (max-width: 767px) {
     .intro__steps-wrap .intro__step:first-child {
-      margin-right: 0px;
+      margin-right: 0;
       margin-bottom: 10px; } }
 
 .intro__step {
+  display: inline-block;
   font-size: 18px; }
   @media (max-width: 767px) {
     .intro__step {
@@ -187,3 +208,65 @@ footer .footer-bottom {
 .intro__round-number--required {
   color: #6ab950;
   border-color: #6ab950; }
+
+.join__form-group {
+  margin-bottom: 40px; }
+  @media (max-width: 767px) {
+    .join__form-group {
+      margin-bottom: 15px; } }
+  @media (max-width: 767px) {
+    .join__form-group:nth-child(3) {
+      margin-bottom: 60px; } }
+  .join__form-group:last-child {
+    margin-bottom: 30px; }
+    @media (max-width: 767px) {
+      .join__form-group:last-child {
+        margin-bottom: 35px; } }
+  .join__form-group .join__label {
+    padding-top: 14px;
+    font-weight: 600; }
+  .join__form-group .join__input {
+    height: 50px; }
+  .join__form-group .join__help {
+    color: #a8a8a8; }
+  @media (max-width: 767px) {
+    .join__form-group .join__btn {
+      margin-bottom: 10px; } }
+
+.join__sign-in {
+  margin-bottom: 35px; }
+
+.join__linkedin {
+  margin-bottom: 30px; }
+
+.join__terms {
+  margin-bottom: 70px;
+  color: #737373; }
+  @media (max-width: 991px) {
+    .join__terms {
+      margin-bottom: 30px; } }
+
+.join__advantages {
+  margin-bottom: 25px; }
+
+.join__logos {
+  margin-bottom: 55px; }
+
+.advantages {
+  padding-left: 0;
+  list-style: none; }
+
+.advantages__item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 5px; }
+  .advantages__item:before {
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #6dbc49; }

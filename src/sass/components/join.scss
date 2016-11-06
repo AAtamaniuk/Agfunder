@@ -1,0 +1,67 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.join {}
+
+.join__form-group {
+  margin-bottom: 40px;
+  @media (max-width: $mobile-max) {
+    margin-bottom: 15px;
+  }
+
+  &:nth-child(3) {
+    @media (max-width: $mobile-max) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &:last-child {
+    margin-bottom: 30px;
+    @media (max-width: $mobile-max) {
+      margin-bottom: 35px;
+    }
+  }
+
+  .join__label {
+    padding-top: 14px;
+    font-weight: 600;
+  }
+
+  .join__input {
+    height: 50px;
+  }
+
+  .join__help {
+    color: $color-grey;
+  }
+
+  .join__btn {
+    @media (max-width: $mobile-max) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.join__sign-in {
+  margin-bottom: 35px;
+}
+
+.join__linkedin {
+  margin-bottom: 30px;
+}
+
+.join__terms {
+  margin-bottom: 70px;
+  color: $color-grey-light;
+  @media (max-width: $tablet-max) {
+    margin-bottom: 30px;
+  }
+}
+
+.join__advantages {
+  margin-bottom: 25px;
+}
+
+.join__logos {
+  margin-bottom: 55px;
+}

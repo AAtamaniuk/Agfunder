@@ -110,7 +110,7 @@ gulp.task("build", function(fn) {
 });
 
 gulp.task('watcher', function () {
-  gulp.start("style");
+  gulp.start("style:dev");
   gulp.watch('src/sass/**/*.scss', ['style:dev']);
 });
 

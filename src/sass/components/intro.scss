@@ -3,8 +3,15 @@
 
 .intro {
   height: 272px;
+  margin-bottom: 30px;
   color: white;
   background-color: hsl(0, 0%, 28%);
+  @media (max-width: $tablet-max) {
+    margin-bottom: 20px;
+  }
+  @media (max-width: $mobile-max) {
+    margin-bottom: 5px;
+  }
 }
 
 .intro--bg-grass {
@@ -41,12 +48,13 @@
 .intro__steps-wrap .intro__step:first-child {
     margin-right: 25px;
   @media (max-width: $mobile-max) {
-    margin-right: 0px;
+    margin-right: 0;
     margin-bottom: 10px;
   }
 }
 
 .intro__step {
+  display: inline-block;
   font-size: 18px;
   @media (max-width: $mobile-max) {
     display: block;

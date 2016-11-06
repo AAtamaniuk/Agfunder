@@ -118,77 +118,87 @@
     <div class="container">
       <form class="form-horizontal">
 
-        <div class="form-group">
-          <label for="inputName" class="col-sm-2  control-label">
+        <div class="form-group  join__form-group">
+          <label for="inputName" class="col-md-3  col-sm-2  control-label  join__label">
             Your name <span class="required">*</span>
           </label>
-          <div class="col-sm-6">
-            <input type="text" class="form-control  input-lg" id="inputName">
+          <div class="col-md-5  col-sm-10">
+            <input type="text" class="form-control  input-lg  join__input" id="inputName">
           </div>
-          <div class="col-sm-3">
+          <div class="col-md-3  col-md-offset-0  col-sm-10  col-sm-offset-2">
             <span class="join__help">Please enter your full name</span>
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="inputEmail" class="col-sm-2  control-label">
+        <div class="form-group  join__form-group">
+          <label for="inputEmail" class="col-md-3  col-sm-2  control-label  join__label">
             Your e-mail <span class="required">*</span>
           </label>
-          <div class="col-sm-6">
-            <input type="email" class="form-control  input-lg" id="inputEmail">
+          <div class="col-md-5  col-sm-10">
+            <input type="email" class="form-control  input-lg  join__input" id="inputEmail">
           </div>
-          <div class="col-sm-3">
+          <div class="col-md-3  col-md-offset-0  col-sm-10  col-sm-offset-2">
             <span class="join__help">Please enter your e-mail and we will send you confirmation letter</span>
           </div>
         </div>
 
-        <div class="form-group">
-          <label for="inputPassword" class="col-sm-2  control-label">
+        <div class="form-group  join__form-group">
+          <label for="inputPassword" class="col-md-3  col-sm-2  control-label  join__label">
             Your password <span class="required">*</span>
           </label>
-          <div class="col-sm-6">
-            <input type="password" class="form-control  input-lg" id="inputPassword">
+          <div class="col-md-5  col-sm-10">
+            <input type="password" class="form-control  input-lg  join__input" id="inputPassword">
           </div>
-          <div class="col-sm-3">
-            <span class="register__help">A-z, 0-9, minimum 8 charecters. Should contain at least one number.</span>
+          <div class="col-md-3  col-md-offset-0 col-sm-10  col-sm-offset-2">
+            <span class="join__help">A-z, 0-9, minimum 8 charecters. Should contain at least one number.</span>
           </div>
         </div>
 
-        <div class="form-group">
-          <div class="col-sm-8">
-            <button type="submit" class="btn  btn-success  btn-block">Go to next step</button>
+        <div class="form-group  join__form-group">
+          <div class="col-md-8  col-md-offset-1  col-sm-9">
+            <button type="submit"
+                    class="join__btn  btn  btn-success  btn-block  btn--big  btn--upper">Go to next step</button>
           </div>
-          <div class="col-sm-2">
-            <button type="submit" class="btn  btn-warning  btn-block">Create account</button>
+          <div class="col-md-2  col-sm-3">
+            <button type="submit"
+                    class="btn  btn-warning  btn-block  btn--big  btn--upper">Create account</button>
           </div>
         </div>
       </form>
 
       <div class="row">
         <div class="col-xs-12  text-center  join__sign-in">
-          Already have an account? Then please <a href="#" class="agf-link">sign in.</a>
+          Already have an account? Then&nbsp;please&nbsp;<a href="#" class="agf-link">sign&nbsp;in.</a>
         </div>
-        <div class="col-xs-12  col-md-4  col-md-offset-4">
-          <a href="#" class="btn btn-block btn-info">Join with LinkedIn</a>
+        <div class="col-xs-12  col-sm-6  col-sm-offset-3  col-md-4  col-md-offset-4  join__linkedin">
+          <a href="#" class="btn  btn-block  btn-info  btn--big">Join with LinkedIn</a>
         </div>
       </div>
       <div class="col-xs-12  text-center  join__terms">
         By creating account you agree with <a href="#" class="agf-link">Terms of Use</a>
       </div>
 
-      <div class="col-xs-12  col-md-4  col-md-offset-4  join__advantages">
-        Exclusive access to curated investment opportunities
+      <div class="col-xs-12  col-sm-6  col-sm-offset-3  col-md-5  col-md-offset-4 join__advantages">
+        <ul class="advantages">
+          <li class="advantages__item">Exclusive access to curated investment opportunities</li>
+          <li class="advantages__item">Invest alongside top tier venture and angel investors</li>
+          <li class="advantages__item">Learn, research, and explore opportunities</li>
+        </ul>
       </div>
-      <div class="col-xs-12  col-md-4  col-md-offset-4  join__advantages">
-        Invest alongside top tier venture and angel investors
-      </div>
-      <div class="col-xs-12  col-md-4  col-md-offset-4  join__advantages">
-        Learn, research, and explore opportunities
-      </div>
-    </div>
+
+      <!--<div class="col-xs-12  col-md-4  col-md-offset-4  join__advantages">-->
+        <!--Exclusive access to curated investment opportunities-->
+      <!--</div>-->
+      <!--<div class="col-xs-12  col-md-4  col-md-offset-4  join__advantages">-->
+        <!--Invest alongside top tier venture and angel investors-->
+      <!--</div>-->
+      <!--<div class="col-xs-12  col-md-4  col-md-offset-4  join__advantages">-->
+        <!--Learn, research, and explore opportunities-->
+      <!--</div>-->
+    <!--</div>-->
   </section>
 
-  <div class="container">
+  <div class="container  join__logos">
     <div class="row">
       <img src="img/join-logos.jpg" alt="Company logos" class="img-responsive center-block">
     </div>
@@ -273,11 +283,15 @@
     </div>
   </div>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
           integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
           crossorigin="anonymous">
   </script>
+
 </footer>
 </body>
 </html>
+ 

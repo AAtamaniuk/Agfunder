@@ -1,0 +1,11 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.btn--big {
+  height: 50px;
+}
+
+.btn--upper {
+  text-transform: uppercase;
+  font-weight: 600;
+}

@@ -1,0 +1,25 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.advantages {
+  padding-left: 0;
+  list-style: none;
+}
+
+.advantages__item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 5px;
+
+  &:before {
+    position: absolute;
+    top: 5px;
+    left: -10px;
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: $green-color;
+  }
+}

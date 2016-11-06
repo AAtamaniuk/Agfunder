@@ -20,9 +20,15 @@ body {
   cursor: pointer;
 }*/
 
+a {
+  color: $link-color;
+}
+
 .page-content {
   //header width
   margin-top: 63px;
 }
 
-
+.required {
+  color: red;
+}
