@@ -9,6 +9,9 @@ body {
 }*/
 a {
   color: #28c356; }
+  a:hover {
+    color: #28c356;
+    text-decoration: underline; }
 
 .page-content {
   margin-top: 63px; }
@@ -20,7 +23,6 @@ a {
 ///////////////////// Navbar /////////////////////
 */
 .navbar {
-  background: url("/static/img/navbar.png") repeat;
   height: 63px;
   background-color: #222; }
 
@@ -35,21 +37,19 @@ a {
   height: 45px; }
 
 .navbar .navbar-right {
-  margin-bottom: 0;
-  background: url("/static/img/navline.png") no-repeat 100% 50%; }
+  margin-bottom: 0; }
 
 .navbar .navbar-nav > li {
-  line-height: 66px;
+  display: inline-block !important;
   margin-right: 14px;
   padding-left: 8px;
-  display: inline-block !important; }
+  line-height: 66px; }
 
 .navbar .navbar-nav > li > a {
-  padding: 0;
   display: inline-block;
+  padding: 0;
   color: #c2c5c9;
-  font-size: 16px;
-  font-family: 'effra_mediumregular';
+  font-size: 15px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75); }
 
 .navbar .navbar-nav > li > a:hover {
@@ -62,7 +62,7 @@ a {
 */
 .dropdown-menu > li > a {
   color: white;
-  font-family: 'effra_mediumregular'; }
+  background-color: black; }
 
 .dropdown-menu {
   background-color: black;
