@@ -3,13 +3,15 @@
 
 .intro {
   height: 272px;
-  margin-bottom: 30px;
   color: white;
   background-color: hsl(0, 0%, 28%);
-  @media (max-width: $tablet-max) {
+  @include laptop {
+    margin-bottom: 30px;
+  }
+  @include tablet {
     margin-bottom: 20px;
   }
-  @media (max-width: $mobile-max) {
+  @include mobile {
     margin-bottom: 5px;
   }
 }
@@ -19,17 +21,19 @@
 }
 
 .intro__title {
-  margin-top: 37px;
-  margin-bottom: 16px;
-  font-family: $heading-font;
+  font-family: $title-font;
   font-weight: bold;
-  font-size: 61px;
-  @media (max-width: $tablet-max) {
+  @include laptop {
+    margin-top: 37px;
+    margin-bottom: 16px;
+    font-size: 61px;
+  }
+  @include tablet {
     margin-top: 50px;
     margin-bottom: 22px;
     font-size: 48px;
   }
-  @media (max-width: $mobile-max) {
+  @include mobile {
     margin-top: 25px;
     margin-bottom: 18px;
     font-size: 30px;
@@ -38,18 +42,18 @@
 
 .intro__subtitle {
   margin-bottom: 40px;
-  @media (max-width: $mobile-max) {
+  @include mobile {
+    margin-bottom: 15px;
     font-size: 16px;
     line-height: 1.25em;
-    margin-bottom: 15px;
   }
 }
 
 .intro__steps-wrap .intro__step:first-child {
-    margin-right: 25px;
-  @media (max-width: $mobile-max) {
-    margin-right: 0;
+  margin-right: 25px;
+  @include mobile {
     margin-bottom: 10px;
+    margin-right: 0;
   }
 }
 
@@ -62,15 +66,38 @@
 }
 
 .intro__round-number {
-  width: 30px;
-  height: 30px;
+  $size: 30px;
   display: inline-block;
-  border: 1px solid white;
-  border-radius: 50%;
+  width: $size;
+  height: $size;
   margin-right: 13px;
+  padding-top: 2px;
+  border: 1px solid white;
+  border-radius: $size / 2;
 }
 
 .intro__round-number--required {
   color: hsl(105, 43%, 52%);
   border-color: hsl(105, 43%, 52%);
 }
+
+.intro__round-number--done {
+  width: 42px;
+  background-color: $link-color;
+  border-color: $link-color;
+
+  &:before {
+    content: "";
+    position: relative;
+    top: -2px;
+    display: inline-block;
+    width: 7px;
+    height: 10px;
+    border-bottom: 3px solid white;
+    border-right: 3px solid white;
+    transform: rotate(45deg);
+    margin-right: 4px;
+  }
+}
+
+

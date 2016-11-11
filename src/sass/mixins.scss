@@ -1,1 +1,31 @@
 @import "vars.scss";
+
+@mixin breakepoint-max ($width) {
+  @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin breakepoint-min ($width) {
+  @media (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @include breakepoint-max ($mobile-max) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @include breakepoint-max ($tablet-max) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @include breakepoint-min ($laptop-min) {
+    @content;
+  }
+}

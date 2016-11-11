@@ -1,0 +1,28 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.join__checkbox-wrap {
+  font-size: 0;
+  margin-right: -10px;
+}
+
+.custom-checkbox {
+  display: inline-block;
+  padding: 15px 30px;
+  color: hsl(0, 0%, 30%);
+  font-size: 14px;
+  margin-right: 10px;
+  font-weight: 400;
+  border: 1px solid hsl(150, 1%, 44%);
+  border-radius: 3px;
+  cursor: pointer;
+  &:hover {
+    background-color: $link-color;
+    border-color: $link-color;
+    color: white;
+  }
+}
+
+.custom-checkbox__hidden-checkbox {
+  display: none;
+}

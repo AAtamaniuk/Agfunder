@@ -1,0 +1,37 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.custom-radio {
+  display: block;
+  margin-bottom: 30px;
+  font-weight: 400;
+  color: hsl(0, 0%, 14%);
+  cursor: pointer;
+
+  &:hover {
+    color: $link-color;
+    &:before {
+      background-color: $link-color;
+    }
+  }
+
+  &:before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 12px;
+    $size: 20px;
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    border: 1px solid black;
+  }
+}
+
+.custom-radio__hidden-radio {
+  display: none;
+}
+
+.custom-radio__hidden-radio::choices + .custom-radio::before {
+  background-color: red;
+}

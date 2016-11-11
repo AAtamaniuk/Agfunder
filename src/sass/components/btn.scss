@@ -9,3 +9,15 @@
   text-transform: uppercase;
   font-weight: 600;
 }
+
+.btn--away {
+  color: white;
+  background-color: hsl(0, 0%, 18%);
+  &:hover {
+    color: white;
+  }
+}
+
+.btn-success {
+  background-color: $link-color;
+}
