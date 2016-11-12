@@ -9,27 +9,33 @@ footer {
   background-size: cover !important;
   background-color: #111;
 }
+
 footer h5 {
-  font-family: 'open_sans_semiboldregular';
+  font-family: $main-font;
   color: #fff;
 }
+
 footer ul {
   margin-top: 0;
   margin-bottom: 10px;
   padding: 0;
   list-style: none;
 }
+
 footer .col-md-3 li {
   line-height: 32px;
 }
+
 footer .col-md-3 li a {
   color: #6BBA51;
   font-size: 14px;
 }
+
 footer p {
   margin: 5px 0 12px;
   color: #7d898e;
 }
+
 footer .connect-with a {
   width: 44px;
   height: 44px;
@@ -38,18 +44,23 @@ footer .connect-with a {
   text-indent: -9999px;
   background: url('/static/img/social.png') no-repeat;
 }
+
 footer .connect-with a.tw {
   background-position: -60px 0;
 }
+
 footer .connect-with a.gplus {
   background-position: -120px 0;
 }
+
 footer .connect-with a.rss {
   background-position: 100% 0;
 }
+
 footer .mixpanel {
   margin-top: 16px;
 }
+
 footer .footer-bottom {
   margin-top: 15px;
   margin-bottom: 15px;
@@ -65,7 +76,7 @@ footer .footer-bottom {
   .navbar-collapse {
     background: url(img/navbar.png) repeat;
   }
-  .navbar .navbar-nav>li {
+  .navbar .navbar-nav > li {
     display: block !important;
     line-height: 30px;
   }

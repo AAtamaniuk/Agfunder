@@ -103,7 +103,7 @@
       </div>
       <div class="intro__steps-wrap">
         <div class="intro__step">
-          <span class="intro__round-number  intro__round-number--required">1</span>
+          <span class="intro__round-number  intro__round-number--done">1</span>
           Required information
         </div>
         <div class="intro__step">
@@ -119,50 +119,162 @@
       <form class="form-horizontal">
 
         <div class="form-group  join__form-group">
-          <label for="inputName" class="col-md-3  col-sm-2  control-label  join__label">
-            Your name <span class="required">*</span>
+          <label class="col-md-3  col-sm-2  control-label  join__label">
+            Investor Type
           </label>
           <div class="col-md-5  col-sm-10">
-            <input type="text" class="form-control  input-lg  join__input" id="inputName">
+            <label for="accredited-investor" class="custom-radio">
+              <input type="radio" class="custom-radio__hidden-radio" id="accredited-investor">
+              I'm an Accredited Investor
+            </label>
+            <label for="institutional-investor" class="custom-radio">
+              <input type="radio" class="custom-radio__hidden-radio" id="institutional-investor">
+              I'm an Institutional Investor
+            </label>
+            <label for="not-investor" class="custom-radio">
+              <input type="radio" class="custom-radio__hidden-radio" id="not-investor">
+              I'm not an Investor
+            </label>
           </div>
           <div class="col-md-3  col-md-offset-0  col-sm-10  col-sm-offset-2">
-            <span class="join__help">Please enter your full name</span>
+            <span class="join__help">
+              Please select option most related to you
+            </span>
           </div>
         </div>
 
         <div class="form-group  join__form-group">
-          <label for="inputEmail" class="col-md-3  col-sm-2  control-label  join__label">
-            Your e-mail <span class="required">*</span>
+          <label class="col-md-3  col-sm-2  control-label  join__label">
+            Food & Ag Investment Categories
           </label>
-          <div class="col-md-5  col-sm-10">
-            <input type="email" class="form-control  input-lg  join__input" id="inputEmail">
+          <div class="col-md-5  col-sm-10 join__checkbox-wrap">
+            <label for="c-biotech" class="custom-checkbox">
+              <input id="c-biotech" type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Biotech
+            </label>
+            <label for="c-emerging" class="custom-checkbox">
+              <input id="c-emerging" type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Emerging Markets
+            </label>
+            <label for="" class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Farmland
+            </label>
+            <label for="" class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Food
+            </label>
+            <label for="" class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Food Tech
+            </label>
+            <label for="" class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Hardware / Robotics
+            </label>
+            <label for="" class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Indoor Ag
+            </label>
+            <label for="" class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Processing
+            </label>
+            <label for="" class="custom-checkbox">
+              <input type="checkbox"
+                     class="custom-checkbox__hidden-checkbox">
+              Sustainability
+            </label>
+            <label for="" class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Plant & Equipment
+            </label>
           </div>
           <div class="col-md-3  col-md-offset-0  col-sm-10  col-sm-offset-2">
-            <span class="join__help">Please enter your e-mail and we will send you confirmation letter</span>
+            <span class="join__help">
+              Please select categories you are most interested in.
+            </span>
           </div>
         </div>
 
         <div class="form-group  join__form-group">
           <label for="inputPassword" class="col-md-3  col-sm-2  control-label  join__label">
-            Your password <span class="required">*</span>
+            Other
           </label>
           <div class="col-md-5  col-sm-10">
             <input type="password" class="form-control  input-lg  join__input" id="inputPassword">
           </div>
           <div class="col-md-3  col-md-offset-0 col-sm-10  col-sm-offset-2">
-            <span class="join__help">A-z, 0-9, minimum 8 charecters. Should contain at least one number.</span>
+            <span class="join__help">
+              Please type here categories that you are interested in but they are not listed above
+            </span>
+          </div>
+        </div>
+
+
+        <div class="form-group  join__form-group">
+          <label for="inputPassword" class="col-md-3  col-sm-2  control-label  join__label">
+            Investment Types
+          </label>
+          <div class="col-md-5  col-sm-10  join__checkbox-wrap">
+            <label for="" class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Debt
+            </label>
+            <label for="" class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Equity
+            </label>
+            <label for="" class="custom-checkbox">
+              <input type="checkbox" class="custom-checkbox__hidden-checkbox">
+              Managed Fund
+            </label>
+          </div>
+          <div class="col-md-3  col-md-offset-0 col-sm-10  col-sm-offset-2">
+            <span class="join__help">
+              Please select investment type
+            </span>
           </div>
         </div>
 
         <div class="form-group  join__form-group">
-          <div class="col-md-8  col-md-offset-1  col-sm-9">
+          <label for="inputPassword" class="col-md-3  col-sm-2  control-label  join__label">
+            Other Investments Type
+          </label>
+          <div class="col-md-5  col-sm-10">
+            <input type="password" class="form-control  input-lg  join__input" id="">
+          </div>
+          <div class="col-md-3  col-md-offset-0 col-sm-10  col-sm-offset-2">
+            <span class="join__help">
+              Please select investment type that you are interested in but they are not listed above
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group  join__form-group">
+          <label for="inputPassword" class="col-md-3  col-sm-2  control-label  join__label">
+            Investment Size
+          </label>
+          <div class="col-md-5  col-sm-10">
+            <input type="password" class="form-control  input-lg  join__input" id="">
+          </div>
+          <div class="col-md-3  col-md-offset-0 col-sm-10  col-sm-offset-2">
+            <span class="join__help">
+              Please select investment type that you are interested in but they are not listed above
+            </span>
+          </div>
+        </div>
+
+        <div class="form-group  join__form-group">
+          <div class="col-md-2  col-md-offset-1 col-sm-3">
             <button type="submit"
-                    class="join__btn  btn  btn-success  btn-block  btn--big  btn--upper">Go to next step
+                    class="btn  btn--away  btn-block  btn--big  btn--upper">Back to step 1
             </button>
           </div>
-          <div class="col-md-2  col-sm-3">
+          <div class="col-md-8 col-sm-9">
             <button type="submit"
-                    class="btn  btn-warning  btn-block  btn--big  btn--upper">Create account
+                    class="join__btn  btn  btn-success  btn-block  btn--big  btn--upper">
+              Finish and go to project list
             </button>
           </div>
         </div>
@@ -172,37 +284,13 @@
         <div class="col-xs-12  text-center  join__sign-in">
           Already have an account? Then&nbsp;please&nbsp;<a href="#" class="agf-link">sign&nbsp;in.</a>
         </div>
-        <div class="col-xs-12  col-sm-6  col-sm-offset-3  col-md-4  col-md-offset-4  join__linkedin">
-          <a href="#" class="btn  btn-block  btn-info  btn--big  btn--linkedin">
-            Join with LinkedIn
-            <img src="img/LinkedIn_logo_initials.png"
-                 alt="LinkedIn logo"
-                 class="btn--linkedin__logo"
-                 width="24"
-                 height="24">
-          </a>
-        </div>
       </div>
       <div class="col-xs-12  text-center  join__terms">
         By creating account you agree with <a href="#" class="agf-link">Terms of Use</a>
       </div>
 
-      <div class="col-xs-12  col-sm-6  col-sm-offset-3  col-md-5  col-md-offset-4 join__advantages">
-        <ul class="advantages">
-          <li class="advantages__item">Exclusive access to curated investment opportunities</li>
-          <li class="advantages__item">Invest alongside top tier venture and angel investors</li>
-          <li class="advantages__item">Learn, research, and explore opportunities</li>
-        </ul>
-      </div>
     </div>
   </section>
-
-  <div class="container  join__logos">
-    <div class="row">
-      <img src="img/join-logos.jpg" alt="Company logos" class="img-responsive center-block">
-    </div>
-  </div>
-
 </main>
 <!-- --------------Page Content End-------------- -->
 
@@ -293,4 +381,4 @@
 </footer>
 </body>
 </html>
- 
+

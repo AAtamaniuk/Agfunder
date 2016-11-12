@@ -21,3 +21,16 @@
 .btn-success {
   background-color: $link-color;
 }
+
+.btn--linkedin {
+  padding: 13px 12px;
+  font-weight: 600;
+
+  &__logo {
+    position: relative;
+    bottom: 3px;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 30px;
+  }
+}
