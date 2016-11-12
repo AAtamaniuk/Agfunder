@@ -29,7 +29,8 @@
 }
 
 .custom-radio__hidden-radio {
-  display: none;
+  position: absolute;
+  opacity: 0;
 }
 
 .custom-radio__hidden-radio::choices + .custom-radio::before {

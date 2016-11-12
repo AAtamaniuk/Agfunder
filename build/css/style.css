@@ -127,21 +127,38 @@ footer .footer-bottom {
   margin-top: 15px;
   margin-bottom: 15px; }
 
+.btn-success {
+  background-color: #28c356; }
+  .btn-success:hover {
+    background-color: #197b36;
+    border-color: #197b36; }
+
+.btn-info {
+  background-color: #56abc2; }
+  .btn-info:hover {
+    background-color: #407b8c;
+    border-color: #407b8c; }
+
+.btn-warning {
+  background-color: #efbb01; }
+  .btn-warning:hover {
+    background-color: #bc870b;
+    border-color: #bc870b; }
+
+.btn--away {
+  color: white;
+  background-color: #2e2e2e; }
+  .btn--away:hover {
+    color: white;
+    background-color: #197b36;
+    border-color: #197b36; }
+
 .btn--big {
   height: 50px; }
 
 .btn--upper {
   text-transform: uppercase;
   font-weight: 600; }
-
-.btn--away {
-  color: white;
-  background-color: #2e2e2e; }
-  .btn--away:hover {
-    color: white; }
-
-.btn-success {
-  background-color: #28c356; }
 
 .btn--linkedin {
   padding: 13px 12px;
@@ -214,6 +231,9 @@ footer .footer-bottom {
   .join__form-group .join__input {
     height: 50px;
     border-radius: 3px; }
+    .join__form-group .join__input:focus {
+      border-color: black;
+      box-shadow: none; }
   .join__form-group .join__help {
     color: #a8a8a8; }
 
@@ -277,7 +297,8 @@ footer .footer-bottom {
     border: 1px solid black; }
 
 .custom-radio__hidden-radio {
-  display: none; }
+  position: absolute;
+  opacity: 0; }
 
 .custom-radio__hidden-radio::choices + .custom-radio::before {
   background-color: red; }

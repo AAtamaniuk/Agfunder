@@ -1,5 +1,42 @@
 @import "../vars.scss";
 @import "../mixins.scss";
+/////////////// Rewrite bootstrap style ///////////////
+
+.btn-success {
+  background-color: $link-color;
+  &:hover {
+    background-color: $link-hover-color;
+    border-color: $link-hover-color;
+  }
+}
+
+.btn-info {
+  background-color: $info-color;
+  &:hover {
+    background-color: $info-color--hover;
+    border-color: $info-color--hover;
+  }
+}
+
+.btn-warning {
+  background-color: $warning-color;
+  &:hover {
+    background-color: $warning-color--hover;
+    border-color: $warning-color--hover;
+  }
+}
+
+//////////////////Custom buttons///////////////////////
+
+.btn--away {
+  color: white;
+  background-color: $away-color;
+  &:hover {
+    color: white;
+    background-color: $link-hover-color;
+    border-color: $link-hover-color;
+  }
+}
 
 .btn--big {
   height: 50px;
@@ -8,18 +45,6 @@
 .btn--upper {
   text-transform: uppercase;
   font-weight: 600;
-}
-
-.btn--away {
-  color: white;
-  background-color: hsl(0, 0%, 18%);
-  &:hover {
-    color: white;
-  }
-}
-
-.btn-success {
-  background-color: $link-color;
 }
 
 .btn--linkedin {
