@@ -1,0 +1,16 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.icon {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  fill: white;
+}
+
+.icon--arrow-right {
+  width: 16px;
+  height: 10px;
+  margin-left: 20px;
+}
+

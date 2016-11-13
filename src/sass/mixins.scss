@@ -12,6 +12,12 @@
   }
 }
 
+@mixin breakepoint-only ($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width){
+    @content;
+  }
+}
+
 @mixin mobile {
   @include breakepoint-max ($mobile-max) {
     @content;
@@ -27,5 +33,11 @@
 @mixin laptop {
   @include breakepoint-min ($laptop-min) {
     @content;
+  }
+}
+
+@mixin tablet-only {
+  @include breakepoint-only($tablet-min, $tablet-max) {
+    @content
   }
 }

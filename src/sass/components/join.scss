@@ -25,6 +25,11 @@
   .join__label {
     padding-top: 14px;
     font-weight: 600;
+    @include tablet-only {
+      //Magic number, because text (Your password *) to long
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   .join__input {
@@ -60,7 +65,7 @@
 
 .join__terms {
   margin-bottom: 70px;
-  color: $color-grey-light;
+  color: $color-grey-dark;
   font-weight: 600;
   @media (max-width: $tablet-max) {
     margin-bottom: 30px;

@@ -1,0 +1,21 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.subtitle {
+  color: $color-grey-darker;
+  font-family: $title-font;
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.subtitle--border {
+  &::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin-top: 25px;
+    border-radius: 1px;
+    background-color: $subtitle-border-color;
+  }
+}

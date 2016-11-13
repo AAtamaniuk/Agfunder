@@ -59,3 +59,9 @@
     margin-left: 30px;
   }
 }
+
+//for 1024px resolution
+.btn__create {
+  //Magic number for 1024px resolution
+  min-width: 146px;
+}
