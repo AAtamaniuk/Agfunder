@@ -13,7 +13,8 @@
 
   <!-- Agfunder Theme -->
   <!--<link href="css/fonts.css" rel="stylesheet">-->
-  <link href="css/style.css" rel="stylesheet">
+  <!--<link href="css/style.css" rel="stylesheet">-->
+  <link href="css/style.min.css" rel="stylesheet">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700%7CRokkitt:400,700" rel="stylesheet">
@@ -21,7 +22,7 @@
 
 <body>
 <!-- SVG sprite (developer)-->
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display: none;">
   <defs>
     <path id="XMLID_11_" d="M-737.4-3638h5144.3v6111.3H-737.4z"></path>
   </defs>
@@ -203,14 +204,18 @@
 
   <div class="join">
     <div class="container">
-      <form class="form-horizontal">
+      <form class="form-horizontal" data-toggle="validator" method="post">
 
-        <div class="form-group  join__form-group">
+        <div class="form-group  join__form-group" >
           <label for="inputName" class="col-md-3  col-sm-2  control-label  join__label">
             Your name <span class="required">*</span>
           </label>
           <div class="col-md-5  col-sm-10">
-            <input type="text" class="form-control  input-lg  join__input" id="inputName">
+            <input type="text"
+                   class="form-control  input-lg  join__input"
+                   id="inputName"
+                   placeholder=" "
+                   required>
           </div>
           <div class="col-md-3  col-md-offset-0  col-sm-10  col-sm-offset-2">
             <span class="join__help">Please enter your full name</span>
@@ -222,7 +227,11 @@
             Your e-mail <span class="required">*</span>
           </label>
           <div class="col-md-5  col-sm-10">
-            <input type="email" class="form-control  input-lg  join__input" id="inputEmail">
+            <input type="email"
+                   class="form-control  input-lg  join__input"
+                   id="inputEmail"
+                   placeholder=" "
+                   required>
           </div>
           <div class="col-md-3  col-md-offset-0  col-sm-10  col-sm-offset-2">
             <span class="join__help">Please enter your e-mail and we will send you confirmation letter</span>
@@ -234,10 +243,15 @@
             Your password <span class="required">*</span>
           </label>
           <div class="col-md-5  col-sm-10">
-            <input type="password" class="form-control  input-lg  join__input" id="inputPassword">
+            <input type="password"
+                   class="form-control  input-lg  join__input"
+                   id="inputPassword"
+                   data-minlength="8"
+                   placeholder=" "
+                   required>
           </div>
           <div class="col-md-3  col-md-offset-0 col-sm-10  col-sm-offset-2">
-            <span class="join__help">A-z, 0-9, minimum 8 charecters. Should contain at least one number.</span>
+            <span class="join__help">A-z, 0-9, minimum 8 characters. Should contain at least one number.</span>
           </div>
         </div>
 

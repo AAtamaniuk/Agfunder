@@ -237,6 +237,10 @@ footer .footer-bottom {
     .join__form-group .join__input:focus {
       border-color: black;
       box-shadow: none; }
+    .join__form-group .join__input:valid {
+      border-color: green; }
+    .join__form-group .join__input:invalid {
+      border-color: red; }
   .join__form-group .join__help {
     color: #a8a8a8; }
 

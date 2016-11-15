@@ -26,7 +26,7 @@
     padding-top: 14px;
     font-weight: 600;
     @include tablet-only {
-      //Magic number, because text (Your password *) to long
+      //Fix, because text (Your password *) to long
       padding-left: 0;
       padding-right: 0;
     }
@@ -39,6 +39,14 @@
     &:focus {
       border-color: black;
       box-shadow: none;
+    }
+
+    &:valid {
+      border-color: green;
+    }
+
+    &:invalid {
+      border-color: red;
     }
   }
 
