@@ -5,7 +5,11 @@
   color: $color-grey-darker;
   font-family: $title-font;
   font-size: 36px;
-  font-weight: 400;
+  font-weight: 700;
+}
+
+.subtitle--small {
+  font-size: 28px;
 }
 
 .subtitle--border {
@@ -14,8 +18,13 @@
     display: block;
     width: 80px;
     height: 3px;
-    margin-top: 25px;
+    margin-top: 0.5em;
     border-radius: 1px;
     background-color: $subtitle-border-color;
   }
 }
+
+
+
+
+

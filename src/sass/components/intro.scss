@@ -44,12 +44,21 @@
   }
 }
 
+.intro__title--news {
+  margin-top: 55px;
+  margin-bottom: 25px;
+}
+
 .intro__subtitle {
   margin-bottom: 40px;
   @include mobile {
     margin-bottom: 15px;
     font-size: 16px;
     line-height: 1.25em;
+  }
+
+  &--big {
+    font-size: 20px;
   }
 }
 

@@ -224,6 +224,10 @@ footer .footer-bottom {
       margin-bottom: 18px;
       font-size: 30px; } }
 
+.intro__title--news {
+  margin-top: 55px;
+  margin-bottom: 25px; }
+
 .intro__subtitle {
   margin-bottom: 40px; }
   @media (max-width: 767px) {
@@ -231,6 +235,8 @@ footer .footer-bottom {
       margin-bottom: 15px;
       font-size: 16px;
       line-height: 1.25em; } }
+  .intro__subtitle--big {
+    font-size: 20px; }
 
 .intro__steps-wrap .intro__step:first-child {
   margin-right: 25px; }
@@ -275,6 +281,10 @@ footer .footer-bottom {
     transform: rotate(45deg);
     margin-right: 4px; }
 
+.news-text {
+  font-size: 18px;
+  line-height: 22px; }
+
 .join__form-group {
   margin-bottom: 40px; }
   @media (max-width: 767px) {
@@ -297,14 +307,17 @@ footer .footer-bottom {
         padding-right: 0; } }
   .join__form-group .join__input {
     height: 50px;
-    border-radius: 3px; }
+    border-radius: 3px;
+    /*&:valid {
+      border-color: green;
+    }
+
+    &:invalid {
+      border-color: red;
+    }*/ }
     .join__form-group .join__input:focus {
       border-color: black;
       box-shadow: none; }
-    .join__form-group .join__input:valid {
-      border-color: green; }
-    .join__form-group .join__input:invalid {
-      border-color: red; }
   .join__form-group .join__help {
     color: #a8a8a8; }
   @media (max-width: 767px) {
@@ -406,14 +419,17 @@ footer .footer-bottom {
   color: #2e2e2e;
   font-family: "Rokkitt", serif;
   font-size: 36px;
-  font-weight: 400; }
+  font-weight: 700; }
+
+.subtitle--small {
+  font-size: 28px; }
 
 .subtitle--border::after {
   content: "";
   display: block;
   width: 80px;
   height: 3px;
-  margin-top: 25px;
+  margin-top: 0.5em;
   border-radius: 1px;
   background-color: #ffcd05; }
 
