@@ -6,6 +6,7 @@
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
@@ -36,10 +37,14 @@ a {
 }
 
 .page-content {
-  //header width
+  //header height
   margin-top: 63px;
 }
 
 .required {
   color: red;
+}
+
+.full-width {
+  width: 100%;
 }

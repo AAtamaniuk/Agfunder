@@ -32,24 +32,6 @@
     }
   }
 
-  .join__input {
-    height: 50px;
-    border-radius: 3px;
-
-    &:focus {
-      border-color: black;
-      box-shadow: none;
-    }
-
-    /*&:valid {
-      border-color: green;
-    }
-
-    &:invalid {
-      border-color: red;
-    }*/
-  }
-
   .join__help {
     color: $color-grey;
   }

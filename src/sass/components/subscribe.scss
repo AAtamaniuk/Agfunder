@@ -1,0 +1,17 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.subscribe {
+  &__title {
+    margin-bottom: 10px;
+  }
+  &__form-group {
+    margin-bottom: 35px;
+  }
+  &__form-group:last-child {
+    margin-bottom: 25px;
+  }
+  &__checkbox {
+    margin-bottom: 25px;
+  }
+}

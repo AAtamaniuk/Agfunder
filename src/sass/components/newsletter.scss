@@ -1,0 +1,30 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.newsletter {
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img-wrap {
+    margin-top: 18px;
+    @include tablet {
+      //padding: 0;
+    }
+  }
+  &__subscribe-wrap {
+    margin-top: 8px;
+    @include tablet {
+      //padding: 0;
+      order: 2;
+      margin-bottom: 42px;
+    }
+  }
+  &__overview-wrap {
+    margin-top: 55px;
+    @include tablet {
+      //padding: 0;
+      order: 1;
+    }
+  }
+}

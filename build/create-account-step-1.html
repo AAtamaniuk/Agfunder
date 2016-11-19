@@ -206,7 +206,7 @@
     <div class="container">
       <form class="form-horizontal" data-toggle="validator" method="post">
 
-        <div class="form-group  join__form-group" >
+        <div class="form-group  join__form-group">
           <label for="inputName" class="col-md-3  col-sm-2  control-label  join__label">
             Your name <span class="required">*</span>
           </label>
@@ -214,6 +214,7 @@
             <input type="text"
                    class="form-control  input-lg  join__input"
                    id="inputName"
+                   pattern="[A-Za-z]"
                    placeholder=" "
                    required>
           </div>
@@ -246,7 +247,6 @@
             <input type="password"
                    class="form-control  input-lg  join__input"
                    id="inputPassword"
-                   data-minlength="8"
                    placeholder=" "
                    required>
           </div>
@@ -270,6 +270,7 @@
             </button>
           </div>
         </div>
+
       </form>
 
       <div class="row">
@@ -389,9 +390,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-
 <script src="js/vendor/bootstrap.min.js"></script>
-
 <script src="js/main.js"></script>
 </body>
 </html>

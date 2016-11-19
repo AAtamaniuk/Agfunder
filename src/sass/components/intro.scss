@@ -16,6 +16,10 @@
   }
 }
 
+.intro--margin-b-0 {
+  margin-bottom: 0;
+}
+
 .intro--bg-grass {
   background-image: url(../img/grass-bg.png);
 }
@@ -45,8 +49,10 @@
 }
 
 .intro__title--news {
+  @include laptop {
   margin-top: 55px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  }
 }
 
 .intro__subtitle {

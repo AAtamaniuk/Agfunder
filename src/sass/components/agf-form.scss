@@ -1,0 +1,24 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.agf-form__input {
+  height: 50px;
+  border-radius: 3px;
+
+  &:focus {
+    border-color: black;
+    box-shadow: none;
+  }
+
+  /*&:valid {
+    border-color: green;
+  }
+
+  &:invalid {
+    border-color: red;
+  }*/
+}
+
+.agf-form__label {
+  font-weight: 600;
+}
