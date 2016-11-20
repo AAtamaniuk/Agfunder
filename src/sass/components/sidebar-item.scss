@@ -1,0 +1,15 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.sidebar {
+  padding-top: 50px;
+}
+
+.sidebar-item {
+  margin-bottom: 40px;
+}
+
+.sidebar-item__title {
+    font-size: 16px;
+    color: $color-grey-31;
+}

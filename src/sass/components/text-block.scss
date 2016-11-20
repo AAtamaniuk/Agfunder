@@ -1,0 +1,14 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.text-block__title {
+  font-family: $title-font;
+  font-size: 24px;
+  color: $color-grey-25;
+  margin-bottom: 15px;
+}
+
+.text-block__text {
+  color: $color-grey-31;
+  line-height: 1.6em;
+}

@@ -8,7 +8,6 @@ $info-color:                hsl(193, 47%, 55%);
 $info-color--hover:         hsl(193, 37%, 40%);
 $warning-color:             hsl(47, 99%, 47%);
 $warning-color--hover:      hsl(42, 89%, 39%);
-
 $subtitle-border-color:     hsl(48, 100%, 51%);
 
 //Fonts
@@ -16,10 +15,14 @@ $subtitle-border-color:     hsl(48, 100%, 51%);
 $main-font:  'Open Sans', sans-serif;
 $title-font: 'Rokkitt', serif;
 
-$color-grey-light:   hsl(0, 0%, 77%);
-$color-grey:         hsl(0, 0%, 66%);
-$color-grey-dark:    hsl(0, 0%, 45%);
-$color-grey-darker:  hsl(0, 0%, 18%);
+$color-grey-lighter:   hsl(0, 0%, 94%);
+$color-grey-light:     hsl(0, 0%, 77%);
+$color-grey:           hsl(0, 0%, 66%);
+$color-grey-dark:      hsl(0, 0%, 45%);
+$color-grey-31:        hsl(0, 0%, 31%);
+$color-grey-25:        hsl(0, 0%, 25%);
+$color-grey-darker:    hsl(0, 0%, 18%);
+
 
 $mobile-max:   767px;
 $tablet-min:   768px;

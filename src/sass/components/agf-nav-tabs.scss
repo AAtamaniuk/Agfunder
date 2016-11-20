@@ -1,0 +1,27 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.agf-nav-tabs {
+}
+
+.agf-nav-tabs > li {
+
+}
+
+.agf-nav-tabs > li > a {
+  font-size: 18px;
+  color: $color-grey-25;
+  font-weight: 700;
+  background-color: $color-grey-lighter;
+  padding: 15px 30px;
+}
+
+.agf-nav-tabs > li > a:hover {
+  color: $link-color;
+}
+
+.agf-nav-tabs>li.active>a,
+.agf-nav-tabs>li.active>a:focus,
+.agf-nav-tabs>li.active>a:hover {
+  color: $link-color;
+}
