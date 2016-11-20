@@ -5,7 +5,9 @@
 }
 
 .agf-nav-tabs > li {
-
+  @include tablet {
+    width: 100%;
+  }
 }
 
 .agf-nav-tabs > li > a {

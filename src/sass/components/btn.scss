@@ -66,8 +66,9 @@
 }
 
 .btn--w364 {
-  width: 364px;
+  max-width: 364px;
 }
+
 //for 1024px resolution
 .btn__create {
   //Magic number for 1024px resolution
