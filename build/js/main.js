@@ -5,16 +5,9 @@ $(document).ready(function(){
     var id  = $(this).attr('href'),
     top = $(id).offset().top - 80;
     $('body,html').animate({scrollTop: top}, 1000);
-    // console.log("ROLL!");
+
   });
 });
-
-/*$(document).ready(function(){
-  $(".JS-sidebar-toggle").on("click", function (event) {
-    event.preventDefault();
-    $(".JS-sidebar-menu").toggle();
-  });
-});*/
 
 $(document).ready(function(){
   $(".JS-sidebar-toggle").on("click", function (event) {

@@ -370,60 +370,69 @@ footer .footer-bottom {
   font-weight: normal;
   font-style: normal; }
 
+/*
+// radiobuttons
 input[type="radio"],
 input[type=checkbox] {
-  display: none; }
+  display: none;
+}
 
-input[type=radio] + label:before {
-  color: #737373;
+input[type=radio] + label:before{
+  color: $color-grey-dark;
   content: '\e80f';
   width: 21px;
   cursor: pointer;
   display: inline-block;
-  font-family: "agfunder-font"; }
-
-input[type=radio]:checked + label:before {
-  color: #6dbc49;
+  font-family: $icon-font;
+}
+input[type=radio]:checked +label:before {
+  color: $main-color;
   content: '\e80e';
   width: 21px;
   display: inline-block;
-  font-family: "agfunder-font"; }
+  font-family: $icon-font;
+}
+input[type=radio]:checked +label{
+  color: $main-color;
+}
 
-input[type=radio]:checked + label {
-  color: #6dbc49; }
-
-input[type=checkbox] + label {
-  font-family: "Open Sans", sans-serif;
+//checkeboxes
+input[type=checkbox] + label{
+  font-family: $main-font;
   font-size: 14px;
-  border: 1px solid #a8a8a8;
+  border: 1px solid $color-grey;
   padding: 15px 30px;
   margin-right: 10px;
   cursor: pointer;
-  border-radius: 3px; }
-  input[type=checkbox] + label:hover {
-    background: #197b36;
-    color: #fff; }
+  border-radius: 3px;
 
+  &:hover{
+    background:  $link-hover-color;
+    color: #fff;
+  }
+}
 input[type=checkbox] + label:before {
   color: #fff;
-  background: #6dbc49;
+  background:$main-color;
   content: '';
   display: inline-block;
-  font-family: "agfunder-font"; }
+  font-family: $icon-font;
+}
 
 input[type=checkbox]:checked + label:before {
   color: #fff;
-  background: #6dbc49;
+  background:$main-color;
   content: '\e80c';
   width: 21px;
   display: inline-block;
-  font-family: "agfunder-font"; }
+  font-family: $icon-font;
+}
 
-input[type=checkbox]:checked + label {
-  background: #6dbc49;
+input[type=checkbox]:checked + label{
+  background:$main-color;
   border: none;
-  color: #fff; }
-
+  color: #fff;
+}*/
 .padding-top-0 {
   padding-top: 0 !important; }
 
