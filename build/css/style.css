@@ -286,6 +286,67 @@ footer .footer-bottom {
   .form-bg__close:focus {
     outline: none; }
 
+@font-face {
+  font-family: 'agfunder-font';
+  src: url("../font/agfunder-font.eot?40008222");
+  src: url("../font/agfunder-font.eot?40008222#iefix") format("embedded-opentype"), url("../font/agfunder-font.woff2?40008222") format("woff2"), url("../font/agfunder-font.woff?40008222") format("woff"), url("../font/agfunder-font.ttf?40008222") format("truetype"), url("../font/agfunder-font.svg?40008222#agfunder-font") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+input[type="radio"],
+input[type=checkbox] {
+  display: none; }
+
+input[type=radio] + label:before {
+  color: #737373;
+  content: '\e80f';
+  width: 21px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "agfunder-font"; }
+
+input[type=radio]:checked + label:before {
+  color: #6dbc49;
+  content: '\e80e';
+  width: 21px;
+  display: inline-block;
+  font-family: "agfunder-font"; }
+
+input[type=radio]:checked + label {
+  color: #6dbc49; }
+
+input[type=checkbox] + label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  border: 1px solid #a8a8a8;
+  padding: 15px 30px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 3px; }
+  input[type=checkbox] + label:hover {
+    background: #197b36;
+    color: #fff; }
+
+input[type=checkbox] + label:before {
+  color: #fff;
+  background: #6dbc49;
+  content: '';
+  display: inline-block;
+  font-family: "agfunder-font"; }
+
+input[type=checkbox]:checked + label:before {
+  color: #fff;
+  background: #6dbc49;
+  content: '\e80c';
+  width: 21px;
+  display: inline-block;
+  font-family: "agfunder-font"; }
+
+input[type=checkbox]:checked + label {
+  background: #6dbc49;
+  border: none;
+  color: #fff; }
+
 .join__form-group {
   margin-bottom: 40px; }
   .join__form-group:last-child {

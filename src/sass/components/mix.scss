@@ -36,3 +36,85 @@
     outline: none;
   }
 }
+
+@import "vars.scss";
+// iconfont
+@font-face {
+  font-family: 'agfunder-font';
+  src: url('../font/agfunder-font.eot?40008222');
+  src: url('../font/agfunder-font.eot?40008222#iefix') format('embedded-opentype'),
+  url('../font/agfunder-font.woff2?40008222') format('woff2'),
+  url('../font/agfunder-font.woff?40008222') format('woff'),
+  url('../font/agfunder-font.ttf?40008222') format('truetype'),
+  url('../font/agfunder-font.svg?40008222#agfunder-font') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// radiobuttons
+input[type="radio"],
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=radio] + label:before{
+  color: $color-grey-dark;
+  content: '\e80f';
+  width: 21px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $icon-font;
+}
+input[type=radio]:checked +label:before {
+  color: $main-color;
+  content: '\e80e';
+  width: 21px;
+  display: inline-block;
+  font-family: $icon-font;
+}
+input[type=radio]:checked +label{
+  color: $main-color;
+}
+
+//checkeboxes
+input[type=checkbox] + label{
+  font-family: $main-font;
+  font-size: 14px;
+  border: 1px solid $color-grey;
+  padding: 15px 30px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+
+  &:hover{
+    background:  $link-hover-color;
+    color: #fff;
+  }
+}
+input[type=checkbox] + label:before {
+  color: #fff;
+  background:$main-color;
+  content: '';
+  display: inline-block;
+  font-family: $icon-font;
+}
+
+input[type=checkbox]:checked + label:before {
+  color: #fff;
+  background:$main-color;
+  content: '\e80c';
+  width: 21px;
+  display: inline-block;
+  font-family: $icon-font;
+}
+
+input[type=checkbox]:checked + label{
+  background:$main-color;
+  border: none;
+  color: #fff;
+}
+
+.padding-top-0 {
+  padding-top: 0 !important;
+}
+
