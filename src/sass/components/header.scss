@@ -19,9 +19,9 @@
 }
 
 .navbar-brand > img {
-  width: 127px;
-  height: 45px;
-}
+   width: 127px;
+   height: 45px;
+ }
 
 .navbar .navbar-right {
   margin-bottom: 0;
@@ -32,6 +32,9 @@
   margin-right: 14px;
   padding-left: 8px;
   line-height: 66px;
+  @media (max-width: 1000px) {
+    margin-right: 0;
+  }
 }
 
 .navbar .navbar-nav > li > a {
@@ -40,6 +43,7 @@
   color: #c2c5c9;
   font-size: 15px;
   text-shadow: 0 1px 2px rgba(0, 0, 0, .75);
+  font-weight: 600;
 }
 
 .navbar .navbar-nav > li > a:hover {
@@ -49,6 +53,11 @@
 }
 
 .navbar-collapse {
+  background: url(../img/navbar.png) repeat;
+}
+
+.navbar-right > li {
+  background-color: black;
   background: url(../img/navbar.png) repeat;
 }
 
@@ -63,5 +72,5 @@
 
 .dropdown-menu {
   background-color: black;
-  background: url('/static/img/navbar.png') repeat;
+  background: url(../img/navbar.png) repeat;
 }

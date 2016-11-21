@@ -48,3 +48,9 @@ a, a:focus {
 .full-width {
   width: 100%;
 }
+
+.hide-tablet {
+  @include tablet {
+    display: none;
+  }
+}

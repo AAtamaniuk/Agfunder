@@ -14,9 +14,9 @@ body {
   text-decoration: none;
   cursor: pointer;
 }*/
-a {
+a, a:focus {
   color: #28c356; }
-  a:hover {
+  a:hover, a:focus:hover {
     color: #28c356;
     text-decoration: underline; }
 
@@ -33,6 +33,7 @@ a {
 ///////////////////// Navbar /////////////////////
 */
 .navbar {
+  background: url(../img/navbar.png) repeat;
   height: 63px;
   background-color: #222; }
 
@@ -60,12 +61,20 @@ a {
   padding: 0;
   color: #c2c5c9;
   font-size: 15px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75); }
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+  font-weight: 600; }
 
 .navbar .navbar-nav > li > a:hover {
   border-bottom: 2px solid #6BBA51;
   text-decoration: none;
   color: #fff; }
+
+.navbar-collapse {
+  background: url(../img/navbar.png) repeat; }
+
+.navbar-right > li {
+  background-color: black;
+  background: url(../img/navbar.png) repeat; }
 
 /*
 ////////////////// Dropdown menu //////////////////
@@ -76,13 +85,13 @@ a {
 
 .dropdown-menu {
   background-color: black;
-  background: url("/static/img/navbar.png") repeat; }
+  background: url(../img/navbar.png) repeat; }
 
 /* Footer */
 footer {
   padding-top: 65px;
   margin: 0;
-  background: url(img/seventh.jpg) no-repeat fixed 50% 0;
+  background: url(../img/seventh.jpg) no-repeat fixed 50% 0;
   background-size: cover !important;
   background-color: #111; }
 
@@ -158,7 +167,8 @@ footer .footer-bottom {
     border-color: #197b36; }
 
 .btn--big {
-  height: 50px; }
+  height: 50px;
+  padding: 6px 20px; }
 
 .btn--large {
   font-size: 24px;
@@ -179,6 +189,9 @@ footer .footer-bottom {
     vertical-align: top;
     margin-left: 30px; }
 
+.btn--w364 {
+  max-width: 364px; }
+
 .btn__create {
   min-width: 146px; }
 
@@ -186,6 +199,10 @@ footer .footer-bottom {
   height: 272px;
   color: white;
   background-color: #474747; }
+
+.intro--short {
+  height: 105px;
+  margin-bottom: 40px !important; }
 
 .intro--margin-b-0 {
   margin-bottom: 0; }
@@ -196,6 +213,9 @@ footer .footer-bottom {
 .intro__title {
   font-family: "Rokkitt", serif;
   font-weight: bold; }
+
+.intro__title--short {
+  margin-bottom: 0; }
 
 .intro__subtitle {
   margin-bottom: 40px; }
@@ -242,6 +262,30 @@ footer .footer-bottom {
   font-size: 18px;
   line-height: 22px; }
 
+.faq-content {
+  margin-bottom: 100px; }
+
+.form-bg {
+  position: relative;
+  background-color: #f0f0f0;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  margin-bottom: 40px;
+  border-radius: 5px; }
+
+.form-bg__close {
+  border: 0;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+  font-weight: 900;
+  z-index: 10; }
+  .form-bg__close:focus {
+    outline: none; }
+
 .join__form-group {
   margin-bottom: 40px; }
   .join__form-group:last-child {
@@ -249,6 +293,12 @@ footer .footer-bottom {
   .join__form-group .join__label {
     padding-top: 14px;
     font-weight: 600; }
+  .join__form-group .join__input {
+    height: 50px;
+    border-radius: 3px; }
+    .join__form-group .join__input:focus {
+      border-color: black;
+      box-shadow: none; }
   .join__form-group .join__help {
     color: #a8a8a8; }
 
@@ -496,6 +546,7 @@ footer .footer-bottom {
     box-shadow: none; }
 
 .agf-form__label {
+  padding-top: 14px !important;
   font-weight: 600; }
 
 .subscribe__title {
@@ -516,6 +567,107 @@ footer .footer-bottom {
 .overview__text {
   margin-bottom: 42px; }
 
+.agf-nav-tabs > li > a {
+  font-size: 18px;
+  color: #404040;
+  font-weight: 700;
+  background-color: #f0f0f0;
+  padding: 15px 30px; }
+
+.agf-nav-tabs > li > a:hover {
+  color: #28c356; }
+
+.agf-nav-tabs > li.active > a,
+.agf-nav-tabs > li.active > a:focus,
+.agf-nav-tabs > li.active > a:hover {
+  color: #28c356; }
+
+.sidebar-item {
+  margin-bottom: 40px; }
+
+.sidebar-item__title {
+  font-size: 16px;
+  color: #4f4f4f; }
+
+.list-simple {
+  list-style: none;
+  padding-left: 20px; }
+
+.list-simple__item {
+  margin: 15px 0; }
+
+.list-simple__item a {
+  font-size: 16px; }
+
+.faq-desc__title {
+  margin-top: 45px; }
+
+.faq-desc__text-block {
+  margin-top: 30px;
+  margin-bottom: 43px; }
+
+.text-block__title {
+  font-family: "Rokkitt", serif;
+  font-size: 24px;
+  color: #404040;
+  margin-bottom: 15px; }
+
+.text-block__text {
+  color: #4f4f4f;
+  line-height: 1.6em; }
+
+.list-number {
+  counter-reset: li;
+  padding-left: 43px;
+  list-style: none; }
+
+.list-number__item {
+  position: relative;
+  margin: 35px 0; }
+  .list-number__item::before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    top: -1px;
+    left: -40px;
+    height: 25px;
+    width: 25px;
+    padding-top: 2px;
+    background-color: #28c356;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 50%; }
+
+.list-dotted {
+  margin-top: 25px;
+  list-style: none;
+  padding-left: 20px; }
+
+.list-dotted__item {
+  position: relative;
+  margin-bottom: 30px; }
+  .list-dotted__item::before {
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: -20px;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background-color: #28c356; }
+
+.sidebar {
+  padding-top: 50px; }
+
+.sidebar__menu {
+  position: relative; }
+  .sidebar__menu--show-tablet {
+    display: block; }
+
+.sidebar__toggle {
+  display: none; }
+
 @media (min-width: 768px) and (max-width: 991px){
   .join__form-group .join__label{
     padding-left: 0;
@@ -528,9 +680,79 @@ footer .footer-bottom {
     margin-top: 37px;
     margin-bottom: 16px;
     font-size: 61px; }
+  .intro__title--short{
+    margin-top: 17px; }
   .intro__title--news{
     margin-top: 55px;
     margin-bottom: 20px; } }
+
+@media (max-width: 991px){
+  .hide-tablet{
+    display: none; }
+  .intro{
+    margin-bottom: 20px; }
+  .intro__title{
+    margin-top: 50px;
+    margin-bottom: 22px;
+    font-size: 48px; }
+  .intro__title--short{
+    margin-top: 28px;
+    font-size: 48px; }
+  .form-bg{
+    padding: 10px; }
+  .join__terms{
+    margin-bottom: 30px; }
+  .newsletter{
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .newsletter__subscribe-wrap{
+    -ms-flex-order: 2;
+    order: 2;
+    margin-bottom: 42px; }
+  .newsletter__overview-wrap{
+    -ms-flex-order: 1;
+    order: 1; }
+  .agf-nav-tabs > li{
+    width: 100%; }
+  .sidebar{
+    z-index: 10;
+    position: fixed;
+    top: 20%;
+    left: 0;
+    max-width: 290px;
+    padding-top: 25px;
+    background: white;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: 0 2px 10px rgba(91, 93, 93, 0.22); }
+  .sidebar__menu{
+    display: none;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .sidebar__toggle{
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    right: -27px;
+    display: block;
+    height: 55px;
+    width: 55px;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    background: white url(../img/sidebar-toggle.png) no-repeat 30px;
+    box-shadow: 10px 1px 10px -4px rgba(91, 93, 93, 0.22); }
+  .sidebar__toggle:focus{
+    outline: none; }
+  .subscribe-modal__label{
+    padding-top: 0      !important;
+    margin-bottom: 10px !important;
+    text-align: left    !important; } }
+
+@media (max-width: 1000px){
+  .navbar .navbar-nav > li{
+    margin-right: 0; } }
 
 @media (max-width: 500px){
   h2{
@@ -547,34 +769,15 @@ footer .footer-bottom {
   .navbar-toggle{
     margin-top: 15px; } }
 
-@media (max-width: 991px){
-  .intro{
-    margin-bottom: 20px; }
-  .intro__title{
-    margin-top: 50px;
-    margin-bottom: 22px;
-    font-size: 48px; }
-  .join__terms{
-    margin-bottom: 30px; }
-  .newsletter{
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-direction: column;
-    flex-direction: column; }
-  .newsletter__subscribe-wrap{
-    -ms-flex-order: 2;
-    order: 2;
-    margin-bottom: 42px; }
-  .newsletter__overview-wrap{
-    -ms-flex-order: 1;
-    order: 1; } }
-
 @media (max-width: 767px){
   .intro{
     margin-bottom: 5px; }
   .intro__title{
     margin-top: 25px;
     margin-bottom: 18px;
+    font-size: 30px; }
+  .intro__title--short{
+    margin-top: 40px;
     font-size: 30px; }
   .intro__subtitle{
     margin-bottom: 15px;
@@ -592,4 +795,10 @@ footer .footer-bottom {
   .join__form-group:last-child{
     margin-bottom: 35px; }
   .join__form-group .join__btn{
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  .subscribe-modal{
+    margin-bottom: 0; }
+  .subscribe-modal__input{
+    margin-bottom: 10px; }
+  .subscribe-modal__submit-btn{
+    width: 100%; } }

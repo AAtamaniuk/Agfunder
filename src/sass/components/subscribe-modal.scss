@@ -1,0 +1,36 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+//////////////REWRITE//////////////
+
+.subscribe-modal {
+  @include mobile {
+    margin-bottom: 0;
+  }
+
+  &__label {
+    @include tablet {
+      padding-top: 0      !important;
+      margin-bottom: 10px !important;
+      text-align: left    !important;
+    }
+  }
+
+  &__input {
+    @include mobile {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__submit-btn {
+    @include mobile {
+      width: 100%;
+    }
+  }
+  //
+  //.subscribe-modal__submit-wrap {
+  //}
+  //
+  //.subscribe-modal__input {
+  //}
+}

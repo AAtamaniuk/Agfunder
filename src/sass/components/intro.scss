@@ -53,6 +53,21 @@
   }
 }
 
+.intro__title--short {
+  margin-bottom: 0;
+  @include laptop {
+    margin-top: 17px;
+  }
+  @include tablet {
+    margin-top: 28px;
+    font-size: 48px;
+  }
+  @include mobile {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+}
+
 .intro__title--news {
   @include laptop {
   margin-top: 55px;

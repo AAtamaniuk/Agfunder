@@ -32,6 +32,16 @@
     }
   }
 
+  .join__input {
+    height: 50px;
+    border-radius: 3px;
+
+    &:focus {
+      border-color: black;
+      box-shadow: none;
+    }
+  }
+
   .join__help {
     color: $color-grey;
   }
