@@ -37,12 +37,12 @@
 //   background-color: red;
 // }
 //radiobuttons
-input[type="radio"],
-input[type=checkbox] {
+.custom-checkbox__hidden-checkbox,
+.custom-radio__hidden-radio {
   display: none;
 }
 
-input[type=radio] + label:before{
+.custom-radio__hidden-radio + label:before{
    color: $color-grey-dark;
   content: '\e80f';
    cursor: pointer;
@@ -54,14 +54,14 @@ input[type=radio] + label:before{
   top: 2px;
   margin-right: 10px;
 }
-input[type=radio]:checked +label:before {
+.custom-radio__hidden-radio:checked +label:before {
   color: $link-color;
   content: '\e80e';
   font-size: 22px;
   font-family: $icon-font;
 }
 
-input[type=radio]:checked +label{
+.custom-radio__hidden-radio:checked +label{
   color: $link-color;
 }
 .custom-radio{
