@@ -202,30 +202,30 @@
     </div>
   </section>
 
-  <section class="join">
+  <div class="join">
     <div class="container">
       <form class="form-horizontal" method="post">
 
         <div class="form-group  join__form-group">
-          <div class="col-md-3  col-sm-2  control-label  join__label  padding-top-0">
+          <div class="col-md-3  col-sm-2  control-label  join__label  join__label--radio-first">
             Investor Type
           </div>
           <div class="col-md-5  col-sm-10">
-            
+
             <input type="radio" class="custom-radio__hidden-radio" id="accredited-investor" name="select-investor-type">
             <label for="accredited-investor" class="custom-radio">
               <span>I'm an Accredited Investor</span>
             </label>
-            
+
             <br>
-           
+
             <input type="radio" class="custom-radio__hidden-radio" id="institutional-investor" name="select-investor-type">
              <label for="institutional-investor" class="custom-radio">
               <span>I'm an Institutional Investor</span>
             </label>
 
             <br>
-            
+
             <input type="radio" class="custom-radio__hidden-radio" id="not-investor" name="select-investor-type">
             <label for="not-investor" class="custom-radio">
               <span>I'm not an Investor</span>
@@ -242,15 +242,16 @@
           <label class="col-md-3  col-sm-2  control-label  join__label">
             Food & Ag Investment Categories
           </label>
+
           <div class="col-md-5  col-sm-10 join__checkbox-wrap">
 
            <input id="c-biotech" type="checkbox" class="custom-checkbox__hidden-checkbox">
-            <label for="c-biotech" class="custom-checkbox">             
+            <label for="c-biotech" class="custom-checkbox">
               Biotech
             </label>
 
              <input id="c-emerging" type="checkbox" class="custom-checkbox__hidden-checkbox">
-            <label for="c-emerging" class="custom-checkbox">             
+            <label for="c-emerging" class="custom-checkbox">
               Emerging Markets
             </label>
 
@@ -265,16 +266,17 @@
             </label>
 
              <input id="c-food-tech" type="checkbox" class="custom-checkbox__hidden-checkbox">
-             
-            <label for="c-food-tech" class="custom-checkbox">   Food Tech           
+
+            <label for="c-food-tech" class="custom-checkbox">
+              Food Tech
             </label>
 
             <input id="c-hardware-robotics" type="checkbox" class="custom-checkbox__hidden-checkbox">
-            <label for="c-hardware-robotics" class="custom-checkbox">              
+            <label for="c-hardware-robotics" class="custom-checkbox">
               Hardware / Robotics
             </label>
 
-            <input id="c-indor-ag"type="checkbox" class="custom-checkbox__hidden-checkbox">
+            <input id="c-indor-ag" type="checkbox" class="custom-checkbox__hidden-checkbox">
             <label for="c-indor-ag" class="custom-checkbox">
               Indoor Ag
             </label>
@@ -285,7 +287,7 @@
             </label>
 
             <input id="c-sustainability" type="checkbox" class="custom-checkbox__hidden-checkbox">
-            <label for="c-sustainability" class="custom-checkbox">              
+            <label for="c-sustainability" class="custom-checkbox">
               Sustainability
             </label>
 
@@ -303,11 +305,11 @@
         </div>
 
         <div class="form-group  join__form-group">
-          <label for="inputPassword" class="col-md-3  col-sm-2  control-label  join__label">
+          <label for="i-other" class="col-md-3  col-sm-2  control-label  join__label">
             Other
           </label>
           <div class="col-md-5  col-sm-10">
-            <input type="password" class="form-control  input-lg  join__input" id="inputPassword">
+            <input type="password" class="form-control  input-lg  join__input" id="i-other">
           </div>
           <div class="col-md-3  col-md-offset-0 col-sm-10  col-sm-offset-2">
             <span class="join__help">
@@ -318,12 +320,12 @@
 
 
         <div class="form-group  join__form-group">
-          <label for="inputPassword" class="col-md-3  col-sm-2  control-label  join__label">
+          <label class="col-md-3  col-sm-2  control-label  join__label">
             Investment Types
           </label>
           <div class="col-md-5  col-sm-10  join__checkbox-wrap">
           <input id="c-debt" type="checkbox" class="custom-checkbox__hidden-checkbox">
-            <label for="c-debt" class="custom-checkbox">              
+            <label for="c-debt" class="custom-checkbox">
               Debt
             </label>
 
@@ -345,11 +347,11 @@
         </div>
 
         <div class="form-group  join__form-group">
-          <label for="inputPassword" class="col-md-3  col-sm-2  control-label  join__label">
+          <label for="i-oit" class="col-md-3  col-sm-2  control-label  join__label">
             Other Investments Type
           </label>
           <div class="col-md-5  col-sm-10">
-            <input type="password" class="form-control  input-lg  join__input" id="">
+            <input type="password" class="form-control  input-lg  join__input" id="i-oit">
           </div>
           <div class="col-md-3  col-md-offset-0 col-sm-10  col-sm-offset-2">
             <span class="join__help">
@@ -359,11 +361,11 @@
         </div>
 
         <div class="form-group  join__form-group">
-          <label for="inputPassword" class="col-md-3  col-sm-2  control-label  join__label">
+          <label for="i-is" class="col-md-3  col-sm-2  control-label  join__label">
             Investment Size
           </label>
           <div class="col-md-5  col-sm-10">
-            <input type="password" class="form-control  input-lg  join__input" id="">
+            <input type="password" class="form-control  input-lg  join__input" id="i-is">
           </div>
           <div class="col-md-3  col-md-offset-0 col-sm-10  col-sm-offset-2">
             <span class="join__help">
@@ -372,10 +374,10 @@
           </div>
         </div>
 
-        <div class="form-group  join__form-group">
+        <div class="form-group  join__form-group  reverse-mob">
           <div class="col-md-2  col-md-offset-1 col-sm-3">
             <button type="submit"
-                    class="btn  btn--away  btn-block  btn--big  btn--upper">Back to step 1
+                    class="btn  btn--away  btn-block  btn--big  btn--upper  btn--min-w">Back to step 1
             </button>
           </div>
           <div class="col-md-8 col-sm-9">
@@ -397,7 +399,7 @@
       </div>
 
     </div>
-  </section>
+  </div>
 </main>
 
 <!--   Page Content End   -->

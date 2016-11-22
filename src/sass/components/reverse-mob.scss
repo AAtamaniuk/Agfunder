@@ -1,0 +1,9 @@
+@import "../vars.scss";
+@import "../mixins.scss";
+
+.reverse-mob {
+  @include mobile {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}

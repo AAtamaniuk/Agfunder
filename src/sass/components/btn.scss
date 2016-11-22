@@ -1,6 +1,10 @@
 @import "../vars.scss";
 @import "../mixins.scss";
 /////////////// Rewrite bootstrap style ///////////////
+.btn {
+  transition-duration: 1s;
+  transition-property: background-color;
+}
 
 .btn-success {
   background-color: $link-color;
@@ -70,8 +74,9 @@
   max-width: 364px;
 }
 
-//for 1024px resolution
-.btn__create {
+
+
+.btn--min-w {
   //Magic number for 1024px resolution
   min-width: 146px;
 }

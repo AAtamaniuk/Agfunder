@@ -37,38 +37,43 @@
 //   background-color: red;
 // }
 //radiobuttons
+
 .custom-checkbox__hidden-checkbox,
 .custom-radio__hidden-radio {
   display: none;
 }
 
-.custom-radio__hidden-radio + label:before{
-   color: $color-grey-dark;
+.custom-radio__hidden-radio + label:before {
   content: '\e80f';
-   cursor: pointer;
-  font-size: 22px;
-  margin-top: -5px;
-  display: inline-block;
   position: relative;
-  font-family: $icon-font;
   top: 2px;
+  display: inline-block;
+  margin-top: -5px;
   margin-right: 10px;
-}
-.custom-radio__hidden-radio:checked +label:before {
-  color: $link-color;
-  content: '\e80e';
-  font-size: 22px;
   font-family: $icon-font;
+  color: $color-grey-dark;
+  font-size: 22px;
+  cursor: pointer;
+  transition-duration: 1s;
 }
 
-.custom-radio__hidden-radio:checked +label{
+.custom-radio__hidden-radio:checked + label:before {
+  content: '\e80e';
+  font-family: $icon-font;
+  color: $link-color;
+  font-size: 22px;
+}
+
+.custom-radio__hidden-radio:checked + label {
   color: $link-color;
 }
-.custom-radio{
-  font-weight: 400;
-  font-size: 14px;
+
+.custom-radio {
   margin-bottom: 25px;
+  font-size: 14px;
+  font-weight: 400;
 }
-label.custom-radio:last-of-type{
+
+label.custom-radio:last-of-type {
   margin-bottom: 0;
 }
