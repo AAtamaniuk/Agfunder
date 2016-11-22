@@ -1,38 +1,74 @@
 @import "../vars.scss";
 @import "../mixins.scss";
 
-.custom-radio {
-  display: block;
-  margin-bottom: 30px;
+// .custom-radio {
+//   display: block;
+//   margin-bottom: 30px;
+//   font-weight: 400;
+//   color: hsl(0, 0%, 14%);
+//   cursor: pointer;
+
+//   &:hover {
+//     color: $link-color;
+//     &:before {
+//       background-color: $link-color;
+//     }
+//   }
+
+//   &:before {
+//     content: "";
+//     display: inline-block;
+//     vertical-align: bottom;
+//     margin-right: 12px;
+//     $size: 20px;
+//     width: $size;
+//     height: $size;
+//     border-radius: 50%;
+//     border: 1px solid black;
+//   }
+// }
+
+// .custom-radio__hidden-radio {
+//   position: absolute;
+//   opacity: 0;
+// }
+
+// .custom-radio__hidden-radio::choices + .custom-radio::before {
+//   background-color: red;
+// }
+//radiobuttons
+input[type="radio"],
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=radio] + label:before{
+   color: $color-grey-dark;
+  content: '\e80f';
+   cursor: pointer;
+  font-size: 22px;
+  margin-top: -5px;
+  display: inline-block;
+  position: relative;
+  font-family: $icon-font;
+  top: 2px;
+  margin-right: 10px;
+}
+input[type=radio]:checked +label:before {
+  color: $link-color;
+  content: '\e80e';
+  font-size: 22px;
+  font-family: $icon-font;
+}
+
+input[type=radio]:checked +label{
+  color: $link-color;
+}
+.custom-radio{
   font-weight: 400;
-  color: hsl(0, 0%, 14%);
-  cursor: pointer;
-
-  &:hover {
-    color: $link-color;
-    &:before {
-      background-color: $link-color;
-    }
-  }
-
-  &:before {
-    content: "";
-    display: inline-block;
-    vertical-align: bottom;
-    margin-right: 12px;
-    $size: 20px;
-    width: $size;
-    height: $size;
-    border-radius: 50%;
-    border: 1px solid black;
-  }
+  font-size: 14px;
+  margin-bottom: 25px;
 }
-
-.custom-radio__hidden-radio {
-  position: absolute;
-  opacity: 0;
-}
-
-.custom-radio__hidden-radio::choices + .custom-radio::before {
-  background-color: red;
+label.custom-radio:last-of-type{
+  margin-bottom: 0;
 }
