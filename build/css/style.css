@@ -292,8 +292,8 @@ footer .footer-bottom {
 
 @font-face {
   font-family: 'agfunder-font';
-  src: url("../font/agfunder-font.eot?40008222");
-  src: url("../font/agfunder-font.eot?40008222#iefix") format("embedded-opentype"), url("../font/agfunder-font.woff2?40008222") format("woff2"), url("../font/agfunder-font.woff?40008222") format("woff"), url("../font/agfunder-font.ttf?40008222") format("truetype"), url("../font/agfunder-font.svg?40008222#agfunder-font") format("svg");
+  src: url("../fonts/agfunder-font.eot?40008222");
+  src: url("../fonts/agfunder-font.eot?40008222#iefix") format("embedded-opentype"), url("../fonts/agfunder-font.woff2?40008222") format("woff2"), url("../fonts/agfunder-font.woff?40008222") format("woff"), url("../fonts/agfunder-font.ttf?40008222") format("truetype"), url("../fonts/agfunder-font.svg?40008222#agfunder-font") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -360,6 +360,9 @@ input[type=checkbox]:checked + label{
   border: none;
   color: #fff;
 }*/
+.lorem {
+  background-color: darkslategrey; }
+
 .join__form-group {
   margin-bottom: 40px; }
   .join__form-group:last-child {

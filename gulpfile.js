@@ -41,13 +41,13 @@ var path = {
     html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
     js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
     style: 'src/sass/style.scss',
-    img: 'build/img/**/*.{png,jpg,gif}', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+    img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
     fonts: 'src/fonts/**/*.*'
   },
   watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
     html: 'src/**/*.html',
     js: 'src/js/**/*.js',
-    style: 'src/style/**/*.scss',
+    style: 'src/sass/**/*.scss',
     img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
@@ -103,37 +103,42 @@ gulp.task("style:build", function() {
   .pipe(reload({stream: true}));
 });
 
-gulp.task("image:build", function() {
-  return gulp.src(path.src.img)
-    .pipe(imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true})
-    ]))
-    .pipe(gulp.dest(path.build.img))
-    .pipe(reload({stream: true}));
-});
+// gulp.task("image:build", function() {
+//   return gulp.src(path.src.img)
+//     .pipe(imagemin([
+//       imagemin.optipng({optimizationLevel: 3}),
+//       imagemin.jpegtran({progressive: true})
+//     ]))
+//     .pipe(gulp.dest(path.build.img))
+//     .pipe(reload({stream: true}));
+// });
 
-/*gulp.task('image:build', function () {
+gulp.task('image:build', function () {
   gulp.src(path.src.img) //Выберем наши картинки
     .pipe(imagemin({ //Сожмем их
       progressive: true,
-      // svgoPlugins: [{removeViewBox: false}],
+      svgoPlugins: [{removeViewBox: false}],
       use: [pngquant()],
       interlaced: true
     }))
     .pipe(gulp.dest(path.build.img)) //И бросим в build
     .pipe(reload({stream: true}));
-});*/
+});
 
-gulp.task("symbols", function() {
-  return gulp.src("build/img/icons/*.svg")
+gulp.task('fonts:build', function() {
+  gulp.src(path.src.fonts)
+    .pipe(gulp.dest(path.build.fonts))
+});
+
+/*gulp.task("symbols", function() {
+  return gulp.src("build/img/icons/!*.svg")
   .pipe(svgmin())
   .pipe(svgstore({
     inlineSvg: true
   }))
   .pipe(rename("symbols.svg"))
   .pipe(gulp.dest("build/img"));
-});
+});*/
 
 
 
@@ -146,24 +151,29 @@ gulp.task("symbols", function() {
 //  .on("change", server.reload);
 //});
 
-gulp.task("copy", function(){
+gulp.task('build', [
+  'html:build',
+  'js:build',
+  'style:build',
+  'fonts:build',
+  'image:build'
+]);
+
+/*gulp.task("copy", function(){
   return gulp.src([
-    "src/fonts/**/*.{woff,woff2}",
-    "src/css/**",
-    "src/img/**",
-    "src/js/**",
-    "src/*.html"
+    "src/fonts/!**!/!*.{woff,woff2}",
+    "src/css/!**",
+    "src/img/!**",
+    "src/js/!**",
+    "src/!*.html"
   ], {
     base: "src"
   })
   .pipe(gulp.dest("build"));
-});
+});*/
 
-gulp.task("clean", function(){
-  return del("build");
-});
 
-gulp.task("build", function(fn) {
+/*gulp.task("build", function(fn) {
   run("clean",
       "copy",
       "style",
@@ -171,11 +181,22 @@ gulp.task("build", function(fn) {
       "symbols",
       fn
      );
+});*/
+
+gulp.task('watch', function () {
+  gulp.watch(path.watch.style, ['style:build']);
+  gulp.watch(path.watch.html, ['html:build']);
+  gulp.watch(path.watch.js, ['js:build']);
+  gulp.watch(path.watch.img, ['image:build']);
+  gulp.watch(path.watch.fonts, ['fonts:build']);
 });
 
-gulp.task('watcher', function () {
-  gulp.start("style:dev");
-  gulp.watch('src/sass/**/*.scss', ['style:dev']);
+gulp.task('server', function () {
+  server(config);
+});
+
+gulp.task("clean", function(){
+  return del("build");
 });
 
 gulp.task('deploy', function() {
@@ -183,4 +204,4 @@ gulp.task('deploy', function() {
     .pipe(ghPages());
 });
 
-gulp.task('default', ['watcher']);
+gulp.task('default', ['build', 'server', 'watch']);
