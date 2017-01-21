@@ -13,6 +13,8 @@ var svgmin = require("gulp-svgmin");
 var run = require("run-sequence");
 var del = require("del");
 var ghPages = require('gulp-gh-pages');
+var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
 var rigger = require('gulp-rigger');
 var reload = server.reload;
 
@@ -69,7 +71,16 @@ gulp.task('html:build', function () {
     .pipe(reload({stream: true})); //И перезагрузим наш сервер для обновлений
 });
 
-
+// Build for JS
+gulp.task('js:build', function () {
+  gulp.src(path.src.js) //Найдем наш main файл
+    .pipe(rigger()) //Прогоним через rigger
+    .pipe(sourcemaps.init()) //Инициализируем sourcemap
+    .pipe(uglify()) //Сожмем наш js
+    .pipe(sourcemaps.write()) //Пропишем карты
+    .pipe(gulp.dest(path.build.js)) //Выплюнем готовый файл в build
+    .pipe(reload({stream: true})); //И перезагрузим сервер
+});
 
 
 gulp.task("style", function() {
