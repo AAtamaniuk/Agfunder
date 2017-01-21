@@ -8,6 +8,7 @@ var mqpacker = require("css-mqpacker");
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
+var pngquant = require('imagemin-pngquant');
 var svgstore = require("gulp-svgstore");
 var svgmin = require("gulp-svgmin");
 var run = require("run-sequence");
@@ -39,8 +40,8 @@ var path = {
   src: { //Пути откуда брать исходники
     html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
     js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
-    style: 'src/style/style.scss',
-    img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+    style: 'src/sass/style.scss',
+    img: 'build/img/**/*.{png,jpg,gif}', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
     fonts: 'src/fonts/**/*.*'
   },
   watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
@@ -82,10 +83,11 @@ gulp.task('js:build', function () {
     .pipe(reload({stream: true})); //И перезагрузим сервер
 });
 
-
-gulp.task("style", function() {
-  gulp.src("src/sass/style.scss")
+// Build for style
+gulp.task("style:build", function() {
+  gulp.src(path.src.style)
   .pipe(plumber())
+  .pipe(sourcemaps.init())
   .pipe(sass())
   .pipe(postcss([
     autoprefixer({browsers: browsers}),
@@ -96,23 +98,32 @@ gulp.task("style", function() {
   .pipe(gulp.dest("build/css"))
   .pipe(minify())
   .pipe(rename("style.min.css"))
-  .pipe(gulp.dest("build/css"));
-  //.pipe(server.reload({stream: true}));
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest(path.build.css))
+  .pipe(reload({stream: true}));
 });
 
-gulp.task("style:dev", function() {
-  gulp.src("src/sass/style.scss")
-  .pipe(plumber())
-  .pipe(sass())
-  .pipe(postcss([
-    autoprefixer({browsers: browsers})
-  ]))
-  .pipe(gulp.dest("src/css"))
-  .pipe(minify())
-  .pipe(rename("style.min.css"))
-  .pipe(gulp.dest("src/css"));
-  //.pipe(server.reload({stream: true}));
+gulp.task("image:build", function() {
+  return gulp.src(path.src.img)
+    .pipe(imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true})
+    ]))
+    .pipe(gulp.dest(path.build.img))
+    .pipe(reload({stream: true}));
 });
+
+/*gulp.task('image:build', function () {
+  gulp.src(path.src.img) //Выберем наши картинки
+    .pipe(imagemin({ //Сожмем их
+      progressive: true,
+      // svgoPlugins: [{removeViewBox: false}],
+      use: [pngquant()],
+      interlaced: true
+    }))
+    .pipe(gulp.dest(path.build.img)) //И бросим в build
+    .pipe(reload({stream: true}));
+});*/
 
 gulp.task("symbols", function() {
   return gulp.src("build/img/icons/*.svg")
@@ -124,14 +135,7 @@ gulp.task("symbols", function() {
   .pipe(gulp.dest("build/img"));
 });
 
-gulp.task("images", function() {
-  return gulp.src("build/img/**/*.{png,jpg,gif}")
-  .pipe(imagemin([
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.jpegtran({progressive: true})
-  ]))
-  .pipe(gulp.dest("build/img"));
-});
+
 
 //gulp.task("serve", function(){
 //  server.init ({
