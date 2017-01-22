@@ -18,6 +18,7 @@ var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var rigger = require('gulp-rigger');
 var reload = server.reload;
+var notify = require("gulp-notify");
 
 var browsers = [
     "last 1 version",
@@ -30,21 +31,21 @@ var browsers = [
 ];
 
 var path = {
-  build: { //Тут мы укажем куда складывать готовые после сборки файлы
+  build: {
     html: 'build/',
     js: 'build/js/',
     css: 'build/css/',
     img: 'build/img/',
     fonts: 'build/fonts/'
   },
-  src: { //Пути откуда брать исходники
-    html: 'src/*.html', //Синтаксис src/*.html говорит gulp что мы хотим взять все файлы с расширением .html
-    js: 'src/js/main.js',//В стилях и скриптах нам понадобятся только main файлы
+  src: {
+    html: 'src/*.html',
+    js: 'src/js/main.js',
     style: 'src/sass/style.scss',
-    img: 'src/img/**/*.*', //Синтаксис img/**/*.* означает - взять все файлы всех расширений из папки и из вложенных каталогов
+    img: 'src/img/**/*.*',
     fonts: 'src/fonts/**/*.*'
   },
-  watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
+  watch: {
     html: 'src/**/*.html',
     js: 'src/js/**/*.js',
     style: 'src/sass/**/*.scss',
@@ -86,7 +87,7 @@ gulp.task('js:build', function () {
 // Build for style
 gulp.task("style:build", function() {
   gulp.src(path.src.style)
-  .pipe(plumber())
+  .pipe(plumber({errorHandler: notify.onError("Error: style:build error!")}))
   .pipe(sourcemaps.init())
   .pipe(sass())
   .pipe(postcss([
@@ -102,16 +103,6 @@ gulp.task("style:build", function() {
   .pipe(gulp.dest(path.build.css))
   .pipe(reload({stream: true}));
 });
-
-// gulp.task("image:build", function() {
-//   return gulp.src(path.src.img)
-//     .pipe(imagemin([
-//       imagemin.optipng({optimizationLevel: 3}),
-//       imagemin.jpegtran({progressive: true})
-//     ]))
-//     .pipe(gulp.dest(path.build.img))
-//     .pipe(reload({stream: true}));
-// });
 
 gulp.task('image:build', function () {
   gulp.src(path.src.img) //Выберем наши картинки
@@ -130,27 +121,6 @@ gulp.task('fonts:build', function() {
     .pipe(gulp.dest(path.build.fonts))
 });
 
-/*gulp.task("symbols", function() {
-  return gulp.src("build/img/icons/!*.svg")
-  .pipe(svgmin())
-  .pipe(svgstore({
-    inlineSvg: true
-  }))
-  .pipe(rename("symbols.svg"))
-  .pipe(gulp.dest("build/img"));
-});*/
-
-
-
-//gulp.task("serve", function(){
-//  server.init ({
-//    server: "build"
-//  });
-//  gulp.watch("sass/**/*.scss", ["style"]);
-//  gulp.watch(".html")
-//  .on("change", server.reload);
-//});
-
 gulp.task('build', [
   'html:build',
   'js:build',
@@ -158,30 +128,6 @@ gulp.task('build', [
   'fonts:build',
   'image:build'
 ]);
-
-/*gulp.task("copy", function(){
-  return gulp.src([
-    "src/fonts/!**!/!*.{woff,woff2}",
-    "src/css/!**",
-    "src/img/!**",
-    "src/js/!**",
-    "src/!*.html"
-  ], {
-    base: "src"
-  })
-  .pipe(gulp.dest("build"));
-});*/
-
-
-/*gulp.task("build", function(fn) {
-  run("clean",
-      "copy",
-      "style",
-      "images",
-      "symbols",
-      fn
-     );
-});*/
 
 gulp.task('watch', function () {
   gulp.watch(path.watch.style, ['style:build']);
@@ -205,3 +151,47 @@ gulp.task('deploy', function() {
 });
 
 gulp.task('default', ['build', 'server', 'watch']);
+
+// TODO rewrite this task
+gulp.task("symbols", function() {
+  return gulp.src("build/img/icons/*.svg")
+    .pipe(svgmin())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
+    .pipe(rename("symbols.svg"))
+    .pipe(gulp.dest("build/img"));
+});
+
+/*gulp.task("copy", function(){
+ return gulp.src([
+ "src/fonts/!**!/!*.{woff,woff2}",
+ "src/css/!**",
+ "src/img/!**",
+ "src/js/!**",
+ "src/!*.html"
+ ], {
+ base: "src"
+ })
+ .pipe(gulp.dest("build"));
+ });*/
+
+/*gulp.task("build", function(fn) {
+ run("clean",
+ "copy",
+ "style",
+ "images",
+ "symbols",
+ fn
+ );
+ });*/
+
+/*gulp.task("image:build", function() {
+ return gulp.src(path.src.img)
+ .pipe(imagemin([
+ imagemin.optipng({optimizationLevel: 3}),
+ imagemin.jpegtran({progressive: true})
+ ]))
+ .pipe(gulp.dest(path.build.img))
+ .pipe(reload({stream: true}));
+ });*/
