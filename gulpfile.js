@@ -85,23 +85,24 @@ gulp.task('js:build', function () {
 });
 
 // Build for style
-gulp.task("style:build", function() {
+gulp.task("style:build", function () {
   gulp.src(path.src.style)
-  .pipe(plumber({errorHandler: notify.onError("Error: style:build error!")}))
-  .pipe(sourcemaps.init())
-  .pipe(sass())
-  .pipe(postcss([
-    autoprefixer({browsers: browsers}),
-    mqpacker({
-      sort: true
-    })
-  ]))
-  .pipe(gulp.dest("build/css"))
-  .pipe(minify())
-  .pipe(rename("style.min.css"))
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest(path.build.css))
-  .pipe(reload({stream: true}));
+    //.pipe(plumber({errorHandler: notify.onError("Error: style:build error!")}))
+    .pipe(plumber({errorHandler: notify.onError("Error: <%= error %> <%= error.message %>")}))
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer({browsers: browsers}),
+      mqpacker({
+        sort: true
+      })
+    ]))
+    .pipe(gulp.dest("build/css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest(path.build.css))
+    .pipe(reload({stream: true}));
 });
 
 gulp.task('image:build', function () {

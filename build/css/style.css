@@ -360,9 +360,6 @@ input[type=checkbox]:checked + label{
   border: none;
   color: #fff;
 }*/
-.lorem {
-  background-color: darkslategrey; }
-
 .join__form-group {
   margin-bottom: 40px; }
   .join__form-group:last-child {
